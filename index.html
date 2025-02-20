@@ -3,9 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animated SVG</title>
+    <title>Full-Screen Animated SVG</title>
+    <style>
+        /* Ensure no margins or padding */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        /* Make SVG fill the screen */
+        #svg-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        /* Ensure object, iframe, and embed elements fill the viewport */
+        object, iframe, embed {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    <img src="wave.svg" alt="Animated SVG">
+
+    <!-- Using <object> to load wave.svg -->
+    <object id="svg-container" type="image/svg+xml" data="wave.svg"></object>
+
+    <!-- Alternative Methods (Uncomment if you prefer) -->
+    <!-- <iframe src="wave.svg" id="svg-container"></iframe> -->
+    <!-- <embed src="wave.svg" type="image/svg+xml" id="svg-container"> -->
+
 </body>
 </html>
