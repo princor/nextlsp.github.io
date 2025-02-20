@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full-Screen Animated SVG</title>
+    <title>SVG at 50% Height</title>
     <style>
         /* Ensure no margins or padding */
         html, body {
@@ -12,18 +12,18 @@
             width: 100%;
             height: 100%;
             overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end; /* Aligns the SVG at the bottom */
         }
 
-        /* Make SVG fill the screen */
+        /* Make SVG fill width but only 50% of height */
         #svg-container {
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 100vw;
-            height: 100vh;
+            height: 50vh; /* 50% of the viewport height */
         }
 
-        /* Ensure object, iframe, and embed elements fill the viewport */
+        /* Ensure object, iframe, and embed elements fill the container */
         object, iframe, embed {
             width: 100%;
             height: 100%;
@@ -34,7 +34,7 @@
 </head>
 <body>
 
-    <!-- Using <object> to load wave.svg -->
+    <!-- Using <object> to load wave.svg at 50% height -->
     <object id="svg-container" type="image/svg+xml" data="wave.svg"></object>
 
     <!-- Alternative Methods (Uncomment if you prefer) -->
