@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SVG at 50% Height</title>
+    <title>xx SVG at Top 50% Height</title>
     <style>
         /* Ensure no margins or padding */
         html, body {
@@ -14,7 +14,7 @@
             overflow: hidden;
             display: flex;
             justify-content: center;
-            align-items: flex-end; /* Aligns the SVG at the bottom */
+            align-items: flex-start; /* Aligns SVG to the top */
         }
 
         /* Make SVG fill width but only 50% of height */
@@ -34,7 +34,7 @@
 </head>
 <body>
 
-    <!-- Using <object> to load wave.svg at 50% height -->
+    <!-- Using <object> to load wave.svg at 50% height (Top Half of Screen) -->
     <object id="svg-container" type="image/svg+xml" data="wave.svg"></object>
 
     <!-- Alternative Methods (Uncomment if you prefer) -->
